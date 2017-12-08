@@ -1,0 +1,26 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CameraSettings : MonoBehaviour {
+
+	public GameObject batCamera, bowlCamera;
+
+	public bool showBatCamera = false;
+	// Use this for initialization
+	void Start () {
+		if(showBatCamera){
+			batCamera.SetActive(true);
+			bowlCamera.SetActive(false);
+		}else{
+			batCamera.SetActive(false);
+			bowlCamera.SetActive(true);
+		}
+	}
+
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+}

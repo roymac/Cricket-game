@@ -1,2 +1,8 @@
-$ Library
-$ **/Temp
+Library
+**/Temp
+**/Obj
+*.userprefs
+/*.csproj
+/*.sln
+*.user
+*.unityproj

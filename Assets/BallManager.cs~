@@ -1,0 +1,27 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BallManager : MonoBehaviour {
+
+	public GameObject ball, bat;
+	public Transform bowler;
+
+	// Use this for initialization
+	void Start () {
+		InvokeRepeating("NewBall", 3f, 3f);
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+	public void NewBall(){
+		Instantiate(ball, bowler.position, Quaternion.identity);
+	}
+
+	public void Swing(string animParamater){
+		bat.GetComponent<Animator>().SetTrigger(animParamater);
+	}
+}
